@@ -4,8 +4,8 @@
 This is a universal base64 converter which can encode/decode base64 as to console as to file. Do you want to easily encode/decode base64 without going to your browser and searching for a converter? So you are welcome  
 
 ## Instruction
-All the instrucitons can be given by ```python3 b64.py``` or ```python3 b64.py --help```.
-Output:
+All the instrucitons can be given by ```python3 b64.py``` or ```python3 b64.py --help```.  
+Output:  
 ```Usage: b64.py [options] [message]
        b64.py [options] [input_file] [output_file]
 
