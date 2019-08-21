@@ -3,6 +3,7 @@ from sys import argv
 from binascii import Error as decode_error
 from os.path import isfile as file_exists
 
+
 if len(argv) == 1 or (len(argv) == 2 and argv[1] == '--help'):
     print("Usage:", argv[0], "[options] [message]")
     print("{0:6}".format(""), argv[0], "[options] [input_file] [output_file]", end="\n\n")
@@ -18,7 +19,7 @@ elif len(argv) == 3:
         except decode_error:
             print("Error: Cannot decode message to base64. Check if the message is encoded correctly.")
         except UnicodeDecodeError:
-        	print("Error: Ooops! Got strange decoding. Please, try to decode it as file.")
+            print("Error: Ooops! Got strange decoding. Please, try to decode it as file.")
     else:
         print("Error: Invalid [options] arguments")
 
