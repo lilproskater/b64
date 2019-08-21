@@ -14,7 +14,7 @@ Usage: b64.py [options] [message]
 -d, --decode      decode message or input file
 ```  
 As you can see here you can use 2 variations. If you give 3 arguments the [message] will be encoded/decoded, but if you give 4 arguments the text in input_file will be encoded/decoded and written to [output_file] as a new file or you will be asked for overwriting a file if it already exsists.  
-###Notice:
+### Notice:
 The script works only on Python 3
 
 
