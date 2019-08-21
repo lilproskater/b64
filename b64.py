@@ -48,6 +48,6 @@ elif len(argv) == 4:
         except decode_error:
             print("Error: Cannot decode text in file to base64. Check if the text is encoded correctly.")
     else:
-       print("Error: Invalid [options] arguments")    
+       print("Error: Invalid [options] arguments")
 else:
     print("Error: Invalid arguments quantity. See {} --help".format(argv[0]))
