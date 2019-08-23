@@ -1,6 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from base64 import b64encode, b64decode
 from sys import argv
-from binascii import Error as decode_error
+from binascii import Error as Decode_error
 from os.path import isfile as file_exists
 
 
@@ -16,7 +19,7 @@ elif len(argv) == 3:
     elif argv[1] in ('-d', '--decode'):
         try:
             print(b64decode(argv[2].encode()).decode())
-        except decode_error:
+        except Decode_error:
             print("Error: Cannot decode message to base64. Check if the message is encoded correctly.")
         except UnicodeDecodeError:
             print("Error: Ooops! Got strange decoding. Please, try to decode it as file.")
@@ -24,8 +27,8 @@ elif len(argv) == 3:
         print("Error: Invalid [options] arguments")
 
 elif len(argv) == 4:
+    message = []
     try:
-        message = []
         with open(argv[2], "rb") as reading_file:
             for line in reading_file:
                 message.append(line)
@@ -45,9 +48,9 @@ elif len(argv) == 4:
             with open(argv[3], 'wb') as writing_file:
                 for line in message:
                     writing_file.write(b64decode(line) + b'\n')
-        except decode_error:
+        except Decode_error:
             print("Error: Cannot decode text in file to base64. Check if the text is encoded correctly.")
     else:
-       print("Error: Invalid [options] arguments")
+        print("Error: Invalid [options] arguments")
 else:
     print("Error: Invalid arguments quantity. See {} --help".format(argv[0]))
